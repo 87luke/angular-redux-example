@@ -1,3 +1,6 @@
 {{ counter$ | async }}
 <button (click)="increment()">Increment</button>
 <button (click)="decrement()">Decrement</button>
+
+
+<app-jedi-list [max]="counter$ | async"></app-jedi-list>
