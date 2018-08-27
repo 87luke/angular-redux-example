@@ -1,6 +1,7 @@
-import {Jedi} from "./jedi.model";
+import {Jedi} from "./jedi/jedi.model";
+import {CounterState} from "./counter/counter.module";
 
 export interface AppState {
-	counter: number,
+	counter: CounterState,
 	jediList: Array<Jedi>
 }

@@ -1,0 +1,6 @@
+<ul *ngFor="let jedi of list$ | async">
+	<li>{{ jedi.name }} <button (click)="remove(jedi.id)">&times;</button></li>
+</ul>
+<input [(ngModel)]="newJedi" placeholder="type a new Jedi's name"  type="text"/>
+<button (click)="add()">Add</button>
+<button (click)="clear()">Clear</button>

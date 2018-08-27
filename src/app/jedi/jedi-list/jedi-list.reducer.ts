@@ -1,3 +1,9 @@
+import {
+	ADD_JEDI,
+	REMOVE_JEDI,
+	CLEAR_JEDIS
+} from "./jedi-list.constants";
+
 export function jediListReducer(state = [], action) {
 	switch(action.type){
 		case "ADD_JEDI":

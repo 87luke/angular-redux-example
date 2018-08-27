@@ -7,19 +7,4 @@ import { Store } from "@ngrx/store";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  counter$; // variable$ mean that is a observable
-
-  constructor(private store: Store<AppState>){
-  	this.counter$ = store.select("counter");
-  }
-
-  increment() {
-  	this.store.dispatch({ type: "INCREMENT" });
-  }
-
-  decrement() {
-	  this.store.dispatch({ type: "DECREMENT" });
-  }
-
-}
+export class AppComponent {}

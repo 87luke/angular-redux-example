@@ -1,9 +1,15 @@
-import {Component, Input} from '@angular/core';
-import { AppState } from "./app-state";
+import { Component, Input } from '@angular/core';
+import { AppState } from "../../app-state";
 import { Store } from "@ngrx/store";
 
+import {
+	addJedi,
+	removeJedi,
+	clearJedis
+} from "./jedi-list.actions";
+
 @Component({
-	selector: 'app-jedi-list',
+	selector: '[jedi-list]',
 	templateUrl: './jedi-list.component.html',
 	styleUrls: ['./jedi-list.component.scss']
 })
@@ -22,25 +28,16 @@ export class JediListComponent {
 	add () {
 		const id = this.counter++;
 		const name = this.newJedi;
-		this.store.dispatch({
-			type:"ADD_JEDI",
-			payload: { id, name }
-		});
+		this.store.dispatch(addJedi(id, name));
 		this.newJedi = '';
 	}
 
 	remove (id) {
-		this.store.dispatch({
-			type: "REMOVE_JEDI",
-			payload: { id }
-		})
+		this.store.dispatch(removeJedi(id));
 	}
 
 	clear () {
-		this.store.dispatch({
-			type: "LOAD_JEDIS",
-			payload: []
-		});
+		this.store.dispatch(clearJedis([]));
 		this.counter = 0;
 	}
 }
