@@ -1,12 +1,39 @@
-# Atari 2600 (Stella) support for multiple assemblers
-# - DASM
-# - CC65
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Assembled binaries and object directories
-obj/
-a.out
-*.bin
-*.a26
+# compiled output
+/dist
+/tmp
+/out-tsc
 
-# Add in special Atari 7800-based binaries for good measure
-*.a78
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
