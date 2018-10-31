@@ -1,10 +1,10 @@
 # compiled output
 /dist
 /tmp
-/out-tsc
+/deploy
 
 # dependencies
-**/node_modules
+node_modules
 
 # IDEs and editors
 /.idea
@@ -29,9 +29,24 @@
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
+yarn.lock
 testem.log
 /typings
 
-# System Files
-.DS_Store
+# unsupported
+*.html
+*.ico
+.clang-format
+.editorconfig
+.gitignore
+.gitlab/CODEOWNERS
+.prettierignore
+.gitkeep
+browserslist
+
+# system files
 Thumbs.db
+.DS_Store
+
+# do not touch
+angular.json
